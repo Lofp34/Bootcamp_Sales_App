@@ -40,34 +40,34 @@ const SuiviHub = ({ onBack }) => {
                     <button onClick={onBack} className={styles.backButton}>←</button>
                     <h1 className={styles.pageTitle}>Suivi d'Activité</h1>
                 </div>
-            </header>
 
-            <div className={styles.filterContainer}>
-                <button
-                    className={`${styles.filterPill} ${filter === 'all' ? styles.active : ''}`}
-                    onClick={() => setFilter('all')}
-                >
-                    Tout
-                </button>
-                <button
-                    className={`${styles.filterPill} ${filter === 'call' ? styles.active : ''}`}
-                    onClick={() => setFilter('call')}
-                >
-                    Appels
-                </button>
-                <button
-                    className={`${styles.filterPill} ${filter === 'sales' ? styles.active : ''}`}
-                    onClick={() => setFilter('sales')}
-                >
-                    Ventes
-                </button>
-                <button
-                    className={`${styles.filterPill} ${filter === 'networking' ? styles.active : ''}`}
-                    onClick={() => setFilter('networking')}
-                >
-                    Réseau
-                </button>
-            </div>
+                <div className={styles.filterContainer}>
+                    <button
+                        className={`${styles.filterPill} ${filter === 'all' ? styles.active : ''}`}
+                        onClick={() => setFilter('all')}
+                    >
+                        Tout
+                    </button>
+                    <button
+                        className={`${styles.filterPill} ${filter === 'call' ? styles.active : ''}`}
+                        onClick={() => setFilter('call')}
+                    >
+                        Appels
+                    </button>
+                    <button
+                        className={`${styles.filterPill} ${filter === 'sales' ? styles.active : ''}`}
+                        onClick={() => setFilter('sales')}
+                    >
+                        Ventes
+                    </button>
+                    <button
+                        className={`${styles.filterPill} ${filter === 'networking' ? styles.active : ''}`}
+                        onClick={() => setFilter('networking')}
+                    >
+                        Réseau
+                    </button>
+                </div>
+            </header>
 
             <div className={styles.content}>
                 {filteredHistory.length === 0 ? (
