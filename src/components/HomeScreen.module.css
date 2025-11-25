@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+}
+
+.prospectionZone,
+.salesZone,
+.suiviZone {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.prospectionZone {
+    background: var(--prospect-gradient);
+    color: var(--white);
+}
+
+.salesZone {
+    background: var(--sales-gradient);
+    color: var(--white);
+}
+
+.suiviZone {
+    background: linear-gradient(135deg, #1A237E 0%, #311B92 100%);
+    /* Midnight Blue / Indigo */
+    color: var(--white);
+}
+
+.prospectionZone:active,
+.salesZone:active,
+.suiviZone:active {
+    transform: scale(0.98);
+}
+
+.content {
+    text-align: center;
+}
+
+.icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}

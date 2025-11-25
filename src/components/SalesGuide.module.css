@@ -1,0 +1,320 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    background-color: var(--gray-100);
+}
+
+.header {
+    background: var(--sales-gradient);
+    padding: 1.5rem;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.stepper {
+    display: flex;
+    padding: 1rem;
+    background: var(--white);
+    overflow-x: auto;
+    gap: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.stepIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.stepIndicator.active,
+.stepIndicator.completed {
+    opacity: 1;
+}
+
+.stepCircle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--gray-800);
+}
+
+.active .stepCircle {
+    background: var(--sales-green);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.completed .stepCircle {
+    background: var(--sales-green);
+    color: var(--white);
+}
+
+.stepLabel {
+    font-size: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contentContainer {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.stepContent {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stepTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--sales-purple);
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--gray-100);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.checkboxLabel input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--sales-green);
+}
+
+.notesArea {
+    margin-top: 2rem;
+}
+
+.label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--gray-800);
+}
+
+.textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 12px;
+    min-height: 120px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.bulletPoint {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--gray-100);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.bulletIcon {
+    font-size: 1.5rem;
+}
+
+.accordion {
+    background: var(--gray-100);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion summary {
+    padding: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    background: #FFEBEE;
+    /* Light red for objection */
+    color: #D32F2F;
+}
+
+.accordion p {
+    padding: 1rem;
+    line-height: 1.5;
+    background: var(--white);
+}
+
+.statusGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.statusButton {
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: var(--gray-200);
+    color: var(--gray-800);
+    transition: all 0.2s;
+}
+
+.selectedSigned {
+    background: var(--sales-green);
+    color: var(--white);
+    transform: scale(1.02);
+}
+
+.selectedRdv {
+    background: var(--prospect-blue);
+    color: var(--white);
+    transform: scale(1.02);
+}
+
+.selectedLost {
+    background: #D32F2F;
+    color: var(--white);
+    transform: scale(1.02);
+}
+
+.footer {
+    padding: 1.5rem;
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+}
+
+.nextButton,
+.finishButton {
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--white);
+}
+
+.nextButton {
+    background: var(--sales-purple);
+}
+
+.finishButton {
+    background: var(--sales-green);
+}
+
+.finishButton:disabled {
+    background: var(--gray-200);
+    color: var(--gray-800);
+    cursor: not-allowed;
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.modalContent {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--sales-purple);
+    text-align: center;
+}
+
+.field {
+    margin-bottom: 1rem;
+}
+
+.field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--gray-800);
+}
+
+.input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.modalActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cancelButton,
+.startButton {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.cancelButton {
+    background: var(--gray-200);
+    color: var(--gray-800);
+}
+
+.startButton {
+    background: var(--sales-green);
+    color: var(--white);
+}

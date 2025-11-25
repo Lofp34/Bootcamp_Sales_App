@@ -1,0 +1,60 @@
+.container {
+    min-height: 100vh;
+    background-color: var(--gray-100);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: var(--prospect-gradient);
+    padding: 1.5rem;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.content {
+    padding: 1.5rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modalContent {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+}
